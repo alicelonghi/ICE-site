@@ -25,9 +25,7 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
         ICE Coatings Systems
-      </Link>{" "}
       {new Date().getFullYear()}
       {"."}
     </Typography>
