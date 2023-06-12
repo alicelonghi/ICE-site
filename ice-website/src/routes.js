@@ -5,6 +5,7 @@ import Form from './pages/form';
 
 export default (
   <Routes>
+    <Route path="/" element={<Login />} />
     <Route path="/login" element={<Login />} />
     <Route path="/catalog" element={<Catalog />} />
     <Route path="/form" element={<Form />} />

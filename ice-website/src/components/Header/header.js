@@ -35,9 +35,9 @@ function Header() {
 
   return (
     <AppBar position="static" style={{ backgroundColor: "#f0f0f0" }}>
-      <Container maxWidth="xl">
+      <Container maxWidth="md">
         <Toolbar disableGutters>
-          <img src={iconlogo} alt="Logo" width="190px" />
+          <img src={iconlogo} alt="Logo" width="160px" />
           {/* menu mobile */}
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -77,12 +77,12 @@ function Header() {
             </Menu>
           </Box>
           {/* menu desktop */}
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }}} style={{ alignSelf: "stretch", marginLeft: '20px' }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }}} style={{ alignSelf: "stretch", marginLeft: '40px' }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={() => handleCloseNavMenu(page)}
-                sx={{ color: "white", display: "block", borderRadius: 0, fontFamily: 'Bebas Neue', fontSize: '17px', minWidth: '75px'}}
+                sx={{ color: "white", display: "block", borderRadius: 0, fontFamily: 'Bebas Neue', fontSize: '17px', minWidth: '85px', paddingBottom: "20px", paddingTop: "20px"}}
                 style={pathname === page ? { backgroundColor: COLORS.red, height: "100%"} : { color: 'black'}}
               >
                 {page}

@@ -21,12 +21,12 @@ export default function Footer() {
   return (
     <footer
       style={{
-        position: "absolute",
+        position: "static",
         bottom: 0,
         width: "100%",
         textAlign: "center",
         paddingBottom: "10px",
-        backgroundColor: "#f0f0f0",
+        backgroundColor: "#dedede",
       }}
     >
       <Container maxWidth="xl">
