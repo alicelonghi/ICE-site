@@ -13,7 +13,7 @@ import iconlogo from "./../../images/iconlogo.png";
 import { COLORS } from "../../colors";
 import { useNavigate } from "react-router";
 
-const pages = ["catalog", "form"];
+const pages = ["services", "form"];
 
 function Header() {
   const navigate = useNavigate();
