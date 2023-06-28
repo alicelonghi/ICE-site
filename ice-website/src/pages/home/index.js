@@ -12,7 +12,7 @@ export default function Home() {
       <WhoWeAre />
       <Services />
       <Partners />
-      <Footer />
+
     </>
   );
 }

@@ -112,7 +112,7 @@ export default function FormContact() {
             </Grid>
             {/* Message */}
             <Grid container paddingTop={2} paddingBottom={2}>
-              <Grid lg={12} md={12} sx={12} item>
+              <Grid lg={12} md={12} sx={12} sm={12}  item>
                 <TextField
                   id="message"
                   placeholder="Type your message here..."

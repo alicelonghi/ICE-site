@@ -21,7 +21,7 @@ export default function Catalog() {
     <>
       <Header />
 
-      <Container maxWidth="lg" style={{ marginTop: "50px" }}>
+      <Container maxWidth="lg" style={{ marginTop: "50px", minHeight: "90vh" }} >
         <Typography variant="h2" fontFamily={"Bebas Neue"} textAlign={"center"}>
           Services
         </Typography>
@@ -121,7 +121,7 @@ export default function Catalog() {
 
       <Partners />
 
-      <Footer />
+  
     </>
   );
 }

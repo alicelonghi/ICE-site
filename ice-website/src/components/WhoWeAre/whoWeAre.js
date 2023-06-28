@@ -6,16 +6,18 @@ function WhoWeAre() {
   return (
     <Container maxWidth="xl" style={{ borderRadius: "2px" }}>
       <Container maxWidth="md">
-        <Grid container spacing={4} marginTop="20px" padding={"20px 0"}>
+        <Grid container spacing={4} marginTop="20px" padding={"20px 0"} className="containerPadding">
           <Grid
             item
             xs={12}
+            sm={12}
             md={6}
             textAlign="right"
             display="flex"
             justifyContent="center"
             alignItems="center"
             style={{ paddingTop: 0, paddingRight: "35px"}}
+            className="textMain"
           >
             <div>
               <Typography
@@ -33,13 +35,14 @@ function WhoWeAre() {
               </Typography>
             </div>
           </Grid>
-          <Grid container xs={12} md={6}>
-            <img src={"/main.jpg"} alt="Logo" width="600px"/>
+          <Grid container xs={12} md={6} sm={12} className="containerMainImage">
+            <img src={"/main.jpg"} alt="Logo" width="600px" className="imageMain"/>
           </Grid>
         </Grid>
       </Container>
     </Container>
   );
 }
+
 
 export default WhoWeAre;

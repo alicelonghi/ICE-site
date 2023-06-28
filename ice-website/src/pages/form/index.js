@@ -29,6 +29,7 @@ export default function Form() {
           backgroundColor: "#f5f5f5",
           borderRadius: "2px",
           padding: "50px 0",
+          minHeight: "85vh"
         }}
       >
         <Container maxWidth="lg" >
@@ -137,7 +138,7 @@ export default function Form() {
           </Grid>
         </Container>
       </Container>
-      <Footer />
+      
     </>
   );
 }
