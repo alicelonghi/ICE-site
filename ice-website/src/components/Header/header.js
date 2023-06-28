@@ -9,11 +9,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import iconlogo from "./../../images/iconlogo.png";
+import iconlogo from "./../../images/logomain.png";
 import { COLORS } from "../../colors";
 import { useNavigate } from "react-router";
 
-const pages = ["services", "form"];
+const pages = ["services", "contact"];
 
 function Header() {
   const navigate = useNavigate();
@@ -34,10 +34,14 @@ function Header() {
   };
 
   return (
-    <AppBar position="static" style={{ backgroundColor: "#f0f0f0" }}>
-      <Container maxWidth="md">
+    <AppBar position="static" style={{ backgroundColor: "#e9e9e9", boxShadow: "none" }}>
+      <Container maxWidth="lg">
         <Toolbar disableGutters>
-          <img src={iconlogo} alt="Logo" width="160px" />
+          <div style={{paddingTop: "5px"}}>
+          <a onClick={() => navigate('/')} style={{ cursor: "pointer"}}>
+            <img src={iconlogo} alt="Logo" width="60px"/>
+          </a>
+          </div>
           {/* menu mobile */}
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -77,13 +81,13 @@ function Header() {
             </Menu>
           </Box>
           {/* menu desktop */}
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }}} style={{ alignSelf: "stretch", marginLeft: '40px' }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }}} style={{ alignSelf: "stretch", marginLeft: '40px', justifyContent: "center" }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={() => handleCloseNavMenu(page)}
-                sx={{ color: "white", display: "block", borderRadius: 0, fontFamily: 'Bebas Neue', fontSize: '17px', minWidth: '85px', paddingBottom: "20px", paddingTop: "20px"}}
-                style={pathname === page ? { backgroundColor: COLORS.red, height: "100%"} : { color: 'black'}}
+                sx={{ color: "white", display: "block", borderRadius: 0, fontFamily: 'Bebas Neue', fontSize: '18px', minWidth: '80px', paddingBottom: "8px", paddingTop: "8px", marginRight: "5px"}}
+                style={pathname === page ? { backgroundColor: COLORS.red, height: "100%"} : { color: COLORS.red, backgroundColor: "#f0f0f0"}}
               >
                 {page}
               </Button>

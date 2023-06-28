@@ -1,6 +1,7 @@
 import { Container } from "@mui/material";
 import React from "react";
 
+
 function Banner({ image, children }) {
   return (
     <Container

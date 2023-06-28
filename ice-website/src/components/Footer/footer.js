@@ -1,12 +1,10 @@
 import { Box, Container, Link, Typography } from "@mui/material";
 import React from "react";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
 import logo from "./../../images/logo.png";
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="textSecondary">
+    <Typography variant="body2" color="textSecondary" fontFamily={'Roboto Condensed'}>
       {"Copyright © "}
       <Link color="inherit" href="#">
         ICE - Coatings Systems
@@ -31,20 +29,7 @@ export default function Footer() {
     >
       <Container maxWidth="xl">
         <Box display={"flex"} alignItems={"center"} justifyContent={"center"}>
-          <Box display={"flex"} flexDirection={"column"} alignItems={"center"}>
-            <Box display={"flex"} alignItems={"center"}>
-              <LocalPhoneIcon />
-              <Typography variant="overline" fontSize={"13px"}>
-                +11 9999-9999
-              </Typography>
-            </Box>
-            <Box display={"flex"}>
-                <LocationOnIcon />
-                <Typography variant="overline" fontSize={"13px"}>
-                Street name
-                </Typography>
-            </Box>
-          </Box>
+          <Box display={"flex"} flexDirection={"column"} alignItems={"center"}></Box>
           <Typography variant="body1">
             <img src={logo} alt="Logo" width="100px" />
           </Typography>
