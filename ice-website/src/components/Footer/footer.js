@@ -6,7 +6,7 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" fontFamily={'Roboto Condensed'}>
       {"Copyright © "}
-      <Link color="inherit" href="#">
+      <Link color="inherit">
         ICE - Coatings Systems
       </Link>{" "}
       {new Date().getFullYear()}

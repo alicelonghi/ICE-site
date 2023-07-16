@@ -9,8 +9,6 @@ import { COLORS } from "../../colors";
 import industrial from "./../../images/coatings/industrial.jpg";
 import residencial from "./../../images/coatings/residencial.jpg";
 import comercial from "./../../images/coatings/comercial.jpg";
-import WhoWeAre from "../../components/WhoWeAre/whoWeAre";
-import Services from "../../components/Services/services";
 export default function Catalog() {
   const services = [
     { type: "Commercial coating", img: comercial },
@@ -20,12 +18,11 @@ export default function Catalog() {
   return (
     <>
       <Header />
-
       <Container maxWidth="lg" style={{ marginTop: "50px", minHeight: "90vh" }} >
         <Typography variant="h2" fontFamily={"Bebas Neue"} textAlign={"center"}>
           Services
         </Typography>
-        <Grid  container spacing={4} marginTop="30px">
+        <Grid marginTop="30px">
           <Box textAlign="center" margin="24px 0">
             <Typography fontFamily={"Roboto Condensed"} fontSize="18px">
               The company offers a range of painting services, including
@@ -35,7 +32,6 @@ export default function Catalog() {
               standards.
             </Typography>
           </Box>
-
           <Grid
             container
             spacing={2}
@@ -44,7 +40,7 @@ export default function Catalog() {
             display={"flex"}
           >
             {services.map((row) => (
-              <Grid container sm={12} md={12} margin={"10px 0"}>
+              <Grid container sm={12} md={12} margin={"10px 0"} className="serviceImage">
                 <Grid
                   item
                   md={7}
@@ -70,52 +66,13 @@ export default function Catalog() {
                     est, ut laoreet urna.
                   </Typography>
                 </Grid>
-                <Grid item md={5} sm={12} style={{ backgroundColor: "#f0f0f0" }}>
-                  <img src={row.img} alt="Logo" width="100%" height={"380px"} />
+                <Grid item md={5} sm={12} style={{ backgroundColor: "#f0f0f0" }} >
+                  <img src={row.img} alt="Logo" width="100%" height={"380px"}  />
                 </Grid>
               </Grid>
             ))}
           </Grid>
-          {/* <Grid container justifyContent="space-between" spacing={2}>
-            {services.map((value, index) => (
-              <Grid key={index} item>
-                <Box
-                  width={270}
-                  minHeight={270}
-                  display="flex"
-                  justifyContent="space-between"
-                  flexDirection="column"
-                  style={{
-                    backgroundImage: `url(${value.img})`,
-                    backgroundPosition: "center",
-                    backgroundSize: "cover",
-                  }}
-                >
-                  <Typography
-                    fontFamily={"Bebas Neue"}
-                    fontSize={"22px"}
-                    backgroundColor={COLORS.red}
-                    textAlign={"center"}
-                    color={"#fff"}
-                  >
-                    {value.type}
-                  </Typography>
-                  <Button
-                    style={{
-                      backgroundColor: COLORS.yellow,
-                      fontSize: "18px",
-                      color: "black",
-                      borderRadius: 0,
-                    }}
-                  >
-                    <Typography fontWeight="600" variant="caption">
-                      know more
-                    </Typography>
-                  </Button>
-                </Box>
-              </Grid>
-            ))}
-          </Grid> */}
+         
         </Grid>
       </Container>
 

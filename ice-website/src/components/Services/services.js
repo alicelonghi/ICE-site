@@ -64,7 +64,7 @@ function Services() {
                     marginRight: "-10px"
                   }}
                 />
-                commercial paiting
+                commercial painting
               </Typography>
             </Box>
             <Box display="flex" flexDirection="column" alignItems="center">
@@ -102,7 +102,7 @@ function Services() {
                     marginRight: "-10px"
                   }}
                 />
-                industrial paiting
+                industrial painting
               </Typography>
             </Box>
             <Box display="flex" flexDirection="column" alignItems="center">
@@ -140,7 +140,7 @@ function Services() {
                     marginRight: "-10px"
                   }}
                 />
-                residential paiting
+                residential painting
               </Typography>
             </Box>
           </Grid>

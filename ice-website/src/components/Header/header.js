@@ -43,7 +43,7 @@ function Header() {
           </a>
           </div>
           {/* menu mobile */}
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none"} }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -51,8 +51,9 @@ function Header() {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
+              style={{ justifyContent: "flex-end"}}
             >
-              <MenuIcon />
+              <MenuIcon style={{ color: "#c1272d" }} />
             </IconButton>
 
             <Menu
@@ -60,7 +61,7 @@ function Header() {
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: "bottom",
-                horizontal: "left",
+                horizontal: "right",
               }}
               keepMounted
               transformOrigin={{
@@ -74,7 +75,7 @@ function Header() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page} onClick={() => handleCloseNavMenu(page)}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}

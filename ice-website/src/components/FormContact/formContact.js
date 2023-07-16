@@ -1,11 +1,28 @@
+import emailjs from '@emailjs/browser';
 import { Box, Grid, TextField, styled } from "@mui/material";
 import { Formik } from "formik";
-import React from "react";
+import React, {useRef} from "react";
+
+
 
 export default function FormContact() {
+  const form = useRef();
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_an2z0hm', 'template_e9ae772', form.current, '-nQyL4ab07JO_luEb')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+  
   return (
     <div>
       <Formik
+      
         initialValues={{ email: "", password: "" }}
         validate={(values) => {
           const errors = {};
@@ -18,12 +35,7 @@ export default function FormContact() {
           }
           return errors;
         }}
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-          }, 400);
-        }}
+       
       >
         {({
           values,
@@ -36,7 +48,7 @@ export default function FormContact() {
           getFieldProps,
           /* and other goodies */
         }) => (
-          <form onSubmit={handleSubmit} className="formContact">
+          <form onSubmit={onSubmit} className="formContact" ref={form}>
             {/* First name and last name */}
             <Grid container columnSpacing={2}>
               <Grid item lg={6} md={6} sx={12}>
@@ -114,6 +126,8 @@ export default function FormContact() {
             <Grid container paddingTop={2} paddingBottom={2}>
               <Grid lg={12} md={12} sx={12} sm={12}  item>
                 <TextField
+                  type="text"
+                  name="message"
                   id="message"
                   placeholder="Type your message here..."
                   multiline
