@@ -13,12 +13,12 @@ export default function FormContact() {
 
     emailjs.sendForm('service_an2z0hm', 'template_e9ae772', form.current, '-nQyL4ab07JO_luEb')
       .then((result) => {
-          console.log(result.text);
+          
       }, (error) => {
           console.log(error.text);
       });
   };
-  
+
   return (
     <div>
       <Formik
