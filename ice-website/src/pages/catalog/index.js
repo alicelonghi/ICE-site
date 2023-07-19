@@ -9,6 +9,7 @@ import { COLORS } from "../../colors";
 import industrial from "./../../images/coatings/industrial.jpg";
 import residencial from "./../../images/coatings/residencial.jpg";
 import comercial from "./../../images/coatings/comercial.jpg";
+import Form from "../form";
 export default function Catalog() {
   const services = [
     { type: "Commercial coating", img: comercial },
@@ -77,6 +78,7 @@ export default function Catalog() {
       </Container>
 
       <Partners />
+      <Form />
 
   
     </>

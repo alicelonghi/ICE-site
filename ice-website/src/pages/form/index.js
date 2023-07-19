@@ -1,10 +1,8 @@
 import React from "react";
 import Header from "../../components/Header/header";
-import Footer from "../../components/Footer/footer";
-import { Box, Container, Divider, Grid, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import { COLORS } from "../../colors";
 import PlaceIcon from "@mui/icons-material/Place";
-import CallIcon from "@mui/icons-material/Call";
 import FormContact from "../../components/FormContact/formContact";
 
 const styleContact = {
@@ -22,11 +20,10 @@ const styleContact = {
 export default function Form() {
   return (
     <>
-      <Header />
       <Container
         maxWidth="100%"
         style={{
-          backgroundColor: "#f5f5f5",
+          backgroundColor: "#ededed",
           borderRadius: "2px",
           padding: "50px 0",
           minHeight: "85vh"
@@ -34,9 +31,7 @@ export default function Form() {
       >
         <Container maxWidth="lg" >
           <Typography
-            variant="h2"
-            fontFamily={"Bebas Neue"}
-            textAlign={"center"}
+            variant="h3" fontSize={"45px"} fontFamily={"Bebas Neue"} textAlign={"center"}
           >
             Let's Discuss Your <br />
             <span style={{ color: COLORS.red }}> Next Project!</span>
@@ -48,7 +43,6 @@ export default function Form() {
                 md={6}
                 sx={12}
                 sm={12}
-                
                 backgroundColor={"#232323"}
                 color={"#f0f0f0"}
                 padding={"20px 30px"}
@@ -66,14 +60,10 @@ export default function Form() {
                     set up a free in-home consultation
                   </Typography>
                 </Box>
-
                 <Box margin={"30px 0px"}>
-                 
                     <span style={{ color: COLORS.white, fontFamily: "Roboto Condensed", fontWeight: 200 }}>Service Areas:</span>{" "}
                     North Island
-                  
                 </Box>
-
                 <Box
                   margin={"30px 0px"}
                   display={"flex"}
@@ -90,16 +80,13 @@ export default function Form() {
                     flexDirection={"column"}
                     fontWeight={'200'}
                     textAlign={"center"}
-
                   >
                     Te Rapa <br />
                     Hamilton
                   </Box>
                 </Box>
-
                 <Grid display={"flex"} justifyContent={"flex-end"} fontWeight={200} flexWrap={"wrap"} columnGap={4} >
                   <Grid display={"flex"} alignItems={"center"}  flexWrap={"wrap"}  >
-                    
                     <Grid
                       display={"flex"}
                       justifyContent={"flex-start"}
@@ -114,7 +101,6 @@ export default function Form() {
                   </Grid>
                 
                   <Grid display={"flex"} alignItems={"center"}  flexWrap={"wrap"}>
-                   
                     <Grid
                       display={"flex"}
                       sx={{ alignItems: "flex-end"}}
@@ -122,8 +108,6 @@ export default function Form() {
                       alignItems={"center"}
                       flexDirection={"column"}
                       flexWrap={"wrap"}
-                    
-                      
                     >
                       angelo@icegroup.co.nz
                       <span>021 251 1679</span>

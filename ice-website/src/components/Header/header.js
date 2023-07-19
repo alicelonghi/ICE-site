@@ -12,8 +12,9 @@ import MenuItem from "@mui/material/MenuItem";
 import iconlogo from "./../../images/logomain.png";
 import { COLORS } from "../../colors";
 import { useNavigate } from "react-router";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-const pages = ["services", "contact"];
+const pages = ["services"];
 
 function Header() {
   const navigate = useNavigate();
@@ -95,7 +96,11 @@ function Header() {
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}></Box>
+          <Box sx={{ flexGrow: 0 }}>
+            <a href="https://www.linkedin.com/company/ice-group-limited/" target="_blank" >
+              <LinkedInIcon cursor="pointer" color="primary" style={{fontSize: "30px"}}/>
+              </a> 
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>

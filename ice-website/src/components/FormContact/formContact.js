@@ -9,6 +9,7 @@ export default function FormContact() {
   const form = useRef();
 
   const onSubmit = (e) => {
+  
     e.preventDefault();
 
     emailjs.sendForm('service_an2z0hm', 'template_e9ae772', form.current, '-nQyL4ab07JO_luEb')
@@ -22,7 +23,8 @@ export default function FormContact() {
   return (
     <div>
       <Formik
-      
+      validateOnBlur={true}
+      validateOnChange={true}
         initialValues={{ email: "", password: "" }}
         validate={(values) => {
           const errors = {};
@@ -45,7 +47,9 @@ export default function FormContact() {
           handleBlur,
           handleSubmit,
           isSubmitting,
+          setSubmitting,
           getFieldProps,
+          isValid
           /* and other goodies */
         }) => (
           <form onSubmit={onSubmit} className="formContact" ref={form}>
@@ -56,6 +60,7 @@ export default function FormContact() {
                   type="text"
                   name="First name"
                   fullWidth
+                  isValid={!errors.first_name}
                   placeholder="First name"
                   {...getFieldProps("first_name")}
                   variant="standard"
@@ -66,6 +71,7 @@ export default function FormContact() {
                   type="text"
                   name="Last name"
                   fullWidth
+                  isValid={!errors.last_name}
                   placeholder="Last name"
                   {...getFieldProps("last_name")}
                   variant="standard"
@@ -78,6 +84,7 @@ export default function FormContact() {
                 <TextField
                   type="email"
                   name="email"
+                  isValid={!errors.email}
                   placeholder="E-mail"
                   fullWidth
                   {...getFieldProps("email")}
@@ -90,6 +97,7 @@ export default function FormContact() {
                   name="phone"
                   placeholder="Phone"
                   fullWidth
+                  isValid={!errors.phone}
                   {...getFieldProps("phone")}
                   variant="standard"
                 />
@@ -101,6 +109,7 @@ export default function FormContact() {
                 <TextField
                   type="text"
                   name="address"
+                  isValid={!errors.address}
                   placeholder="Address"
                   fullWidth
                   {...getFieldProps("address")}
@@ -115,6 +124,7 @@ export default function FormContact() {
                 <TextField
                   type="text"
                   name="subject"
+                  isValid={!errors.subject}
                   placeholder="Subject"
                   fullWidth
                   {...getFieldProps("subject")}
@@ -142,7 +152,8 @@ export default function FormContact() {
 
             <button
               type="submit"
-              disabled={isSubmitting}
+              disabled={!isValid || (Object.keys(touched).length === 0 && touched.constructor === Object)}
+              className='formButton'
               style={{
                 border: "none",
                 borderRadius: "2px",

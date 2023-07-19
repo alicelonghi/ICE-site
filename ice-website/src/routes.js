@@ -7,8 +7,6 @@ import Home from './pages/home';
 export default (
   <Routes>
     <Route path="/" element={<Home/>} />
-    <Route path="/login" element={<Login />} />
     <Route path="/services" element={<Catalog />} />
-    <Route path="/contact" element={<Form />} />
   </Routes>
 );

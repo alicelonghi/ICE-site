@@ -68,3 +68,8 @@ code {
 
 
 }
+
+
+.formButton:disabled {
+  background-color: gray !important;
+}
