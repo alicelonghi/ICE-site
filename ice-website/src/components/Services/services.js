@@ -25,12 +25,12 @@ function Services() {
         >
           Services <br />{" "}
         </Typography>
-        <Typography textAlign={"center"} marginTop={"16px"} fontFamily={'Roboto Condensed'} fontSize={"18px"}>
-        With a commitment to using only the best products and techniques, we guarantee that your project will be completed with precision and excellence.
+        <Typography textAlign={"center"} marginTop={"18px"} fontFamily={'Roboto Condensed'} fontWeight={300} fontSize={"18px"} padding={"0 60px"}>
+        With a commitment to using only the best products and techniques, we guarantee that your project will be completed with precision and excellence. 
         </Typography>
-        <Grid spacing={4} marginTop="20px" marginBottom={"20px"}>
-          <Grid container justifyContent={"space-evenly"}>
-            <Box display="flex" flexDirection="column" alignItems="center">
+        <Grid spacing={2} marginTop="20px" marginBottom={"20px"}>
+          <Grid container justifyContent={"space-around"}>
+            <Box display="flex" flexDirection="column" alignItems="center" >
               <Box
                 display="flex"
                 justifyContent="center"
@@ -40,6 +40,7 @@ function Services() {
                 height={"180px"}
                 backgroundColor={COLORS.red}
                 margin={"10px 0px"}
+              
               >
                 <img
                   src={comercial}
@@ -64,7 +65,7 @@ function Services() {
                     marginRight: "-10px"
                   }}
                 />
-                commercial painting
+                commercial coatings
               </Typography>
             </Box>
             <Box display="flex" flexDirection="column" alignItems="center">
@@ -102,7 +103,7 @@ function Services() {
                     marginRight: "-10px"
                   }}
                 />
-                industrial painting
+                industrial coatings
               </Typography>
             </Box>
             <Box display="flex" flexDirection="column" alignItems="center">
@@ -140,7 +141,7 @@ function Services() {
                     marginRight: "-10px"
                   }}
                 />
-                residential painting
+                residential coatings
               </Typography>
             </Box>
           </Grid>
